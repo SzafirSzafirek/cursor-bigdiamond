@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ruleset name="BigDIAMOND White Prestige">
+	<description>PHP_CodeSniffer configuration for BigDIAMOND theme</description>
+
+	<!-- Check all PHP files in the theme -->
+	<file>.</file>
+
+	<!-- Exclude patterns -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/dist/*</exclude-pattern>
+
+	<!-- Use WordPress Coding Standards -->
+	<rule ref="WordPress">
+		<!-- Allow short array syntax -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- Check PHP 8.3+ compatibility -->
+	<config name="testVersion" value="8.3-"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- Text Domain -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="bigdiamond-white-prestige"/>
+		</properties>
+	</rule>
+
+	<!-- Prefix for hooks and functions -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array" value="bdwp,BDWP"/>
+		</properties>
+	</rule>
+</ruleset>
