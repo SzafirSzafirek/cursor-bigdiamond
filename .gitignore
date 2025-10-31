@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build files
+dist/
+build/
+*.min.css
+*.min.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Logs
+*.log
+npm-debug.log*
+error_log
+
+# Environment
+.env
+.env.local
+
+# WordPress
+wp-config-local.php
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Assets (keep structure, ignore builds)
+# Uncomment if using build process
+# /assets/css/main.css
+# /assets/js/main.js
